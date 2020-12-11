@@ -7,3 +7,14 @@ for (let i = 0; i < 16; i++) {
         grid.appendChild(div);
     }
 }
+
+const cells = document.querySelectorAll('.cell');
+
+cells.forEach((cell) => {
+
+    cell.addEventListener('mouseover', cellToBlack);
+});
+
+function cellToBlack() {
+    this.style.backgroundColor = "black";
+}
