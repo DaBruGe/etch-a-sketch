@@ -15,6 +15,25 @@ cells.forEach((cell) => {
     cell.addEventListener('mouseover', cellToBlack);
 });
 
+const reset = document.querySelector('#clearGrid')
+
+reset.addEventListener('click', () => {
+    clearGrid(cells);
+});
+
+
+
+
+
+
+
+
 function cellToBlack() {
     this.style.backgroundColor = "black";
+}
+
+function clearGrid(cells) {
+    cells.forEach((cell) => {
+        cell.style.backgroundColor = "white";
+    })
 }
