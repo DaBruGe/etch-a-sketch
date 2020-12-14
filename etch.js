@@ -1,7 +1,9 @@
+let gridSize = 16;
+
 const grid = document.querySelector('#grid');
 
-for (let i = 0; i < 16; i++) {
-    for (let j = 0; j < 16; j++) {
+for (let i = 0; i < gridSize; i++) {
+    for (let j = 0; j < gridSize; j++) {
         const div = document.createElement('div');
         div.classList.add("cell");
         grid.appendChild(div);
@@ -19,7 +21,7 @@ const reset = document.querySelector('#clearGrid')
 
 reset.addEventListener('click', () => {
     clearGrid(cells);
-    let gridSize = prompt("Select size of new grid. Maximum 100.")
+    gridSize = prompt("Select size of new grid. Maximum 100.")
     // alert grid size function
 });
 
