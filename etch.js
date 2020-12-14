@@ -1,4 +1,4 @@
-let gridSize = 16;
+let gridSize = prompt("Select size of grid. Maximum 100.");
 
 generateGrid(gridSize);
 
