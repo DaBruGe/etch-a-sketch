@@ -19,11 +19,13 @@ const reset = document.querySelector('#clearGrid')
 
 reset.addEventListener('click', () => {
     clearGrid(cells);
+    let gridSize = prompt("Select size of new grid. Maximum 100.")
+    // alert grid size function
 });
 
 
 
-
+// New function for alert on grid size - plug into the click event
 
 
 
