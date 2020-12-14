@@ -15,12 +15,7 @@ reset.addEventListener('click', () => {
     clearGrid(cells);
     gridSize = prompt("Select size of new grid. Maximum 100.")
     generateGrid(gridSize);
-    // alert grid size function
 });
-
-
-
-// New function for alert on grid size - plug into the click event
 
 
 
@@ -37,6 +32,8 @@ function clearGrid(cells) {
 
 function generateGrid(gridSize) {
     const grid = document.querySelector('#grid');
+    grid.style.setProperty('--grid-rows', gridSize);
+    grid.style.setProperty('--grid-cols', gridSize);
 
     for (let i = 0; i < gridSize; i++) {
         for (let j = 0; j < gridSize; j++) {
