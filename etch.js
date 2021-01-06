@@ -13,7 +13,9 @@ const reset = document.querySelector('#clearGrid')
 
 reset.addEventListener('click', () => {
     clearGrid(cells);
-    gridSize = prompt("Select size of new grid. Maximum 100.")
+    do {
+        gridSize = prompt("Select size of new grid. Maximum 100.")
+    } while (gridSize > 100);
     generateGrid(gridSize);
 });
 
