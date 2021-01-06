@@ -1,13 +1,13 @@
-let gridSize = prompt("Select size of grid. Maximum 100.");
+let gridSize = 16;
+const grid = document.querySelector('#grid');
 
 generateGrid(gridSize);
 
 const cells = document.querySelectorAll('.cell');
 
-cells.forEach((cell) => {
+cellListener();
 
-    cell.addEventListener('mouseover', cellToBlack);
-});
+
 
 const reset = document.querySelector('#clearGrid')
 
@@ -19,19 +19,19 @@ reset.addEventListener('click', () => {
 
 
 
-
 function cellToBlack() {
     this.style.backgroundColor = "black";
 }
 
 function clearGrid(cells) {
+    cells = document.querySelectorAll('.cell');
     cells.forEach((cell) => {
         cell.remove();
     })
 }
 
 function generateGrid(gridSize) {
-    const grid = document.querySelector('#grid');
+    
     grid.style.setProperty('--grid-rows', gridSize);
     grid.style.setProperty('--grid-cols', gridSize);
 
@@ -42,4 +42,14 @@ function generateGrid(gridSize) {
             grid.appendChild(div);
         }
     }
+    cellListener();
+}
+
+function cellListener() {
+    const cells = document.querySelectorAll('.cell');
+
+    cells.forEach((cell) => {
+    
+        cell.addEventListener('mouseover', cellToBlack);
+    });
 }
