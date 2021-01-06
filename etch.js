@@ -37,12 +37,10 @@ function generateGrid(gridSize) {
     grid.style.setProperty('--grid-rows', gridSize);
     grid.style.setProperty('--grid-cols', gridSize);
 
-    for (let i = 0; i < gridSize; i++) {
-        for (let j = 0; j < gridSize; j++) {
-            const div = document.createElement('div');
-            div.classList.add("cell");
-            grid.appendChild(div);
-        }
+    for (let i = 0; i < (gridSize * gridSize); i++) {
+        const div = document.createElement('div');
+        div.classList.add("cell");
+        grid.appendChild(div);
     }
     cellListener();
 }
