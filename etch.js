@@ -53,3 +53,11 @@ function cellListener() {
         cell.addEventListener('mouseover', cellToBlack);
     });
 }
+
+function cellToRainbow() {
+    let red = Math.floor(Math.random() * 255);
+    let green = Math.floor(Math.random() * 255);
+    let blue = Math.floor(Math.random() * 255);
+    let col = "rgb(" + red + "," + green + "," + blue + ")";
+    this.style.backgroundColor = col;
+}
